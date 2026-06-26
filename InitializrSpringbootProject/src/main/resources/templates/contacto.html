@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/plantilla :: head}">
+</head>
+
+<body>
+
+<header th:replace="~{fragments/plantilla :: header}"></header>
+
+<nav th:replace="~{fragments/plantilla :: navbar}"></nav>
+
+<div class="container mt-5">
+
+    <h2>Contacto</h2>
+
+    <form th:action="@{/contacto/enviar}" method="post">
+
+        <div class="mb-3">
+            <label>Nombre</label>
+            <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Correo</label>
+            <input type="email" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label>Mensaje</label>
+            <textarea class="form-control" rows="5"></textarea>
+        </div>
+
+        <button class="btn btn-primary">
+            Enviar
+        </button>
+
+    </form>
+
+</div>
+
+<footer th:replace="~{fragments/plantilla :: footer}"></footer>
+
+</body>
+</html>
